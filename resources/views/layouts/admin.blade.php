@@ -865,13 +865,11 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('order.admin') }}">Order</a></li>
                             <li><a href="{{asset('backend')}}/page-login.html">Login</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Role Management</a>
                                 <ul aria-expanded="false">
-                                    <li><a href="{{asset('backend')}}/page-error-400.html">Error 400</a></li>
-                                    <li><a href="{{asset('backend')}}/page-error-403.html">Error 403</a></li>
-                                    <li><a href="{{asset('backend')}}/page-error-404.html">Error 404</a></li>
-                                    <li><a href="{{asset('backend')}}/page-error-500.html">Error 500</a></li>
-                                    <li><a href="{{asset('backend')}}/page-error-503.html">Error 503</a></li>
+                                    <li><a href="{{ route('role.manager') }}">Role Manager</a></li>
+
+                                  
                                 </ul>
                             </li>
                             <li><a href="{{asset('backend')}}/page-lock-screen.html">Lock Screen</a></li>

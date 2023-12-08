@@ -12,6 +12,7 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RolManagerController;
 use App\Http\Controllers\Subcategory;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Route;
@@ -97,5 +98,9 @@ Route::get('/order/list',[CustomerAuthController::class,'orderList'])->name('ord
 Route::get('/order/list/download/{id}',[CustomerAuthController::class,'orderDownload'])->name('order.download');
 Route::get('/order/admin',[OrderController::class,'orders'])->name('order.admin');
 Route::post('/order/active',[OrderController::class,'order_active'])->name('order.active');
+Route::get('role/manager',[RolManagerController::class,'rolemanager'])->name('role.manager');
+Route::post('/permission/store',[RolManagerController::class,'role_store'])->name('role.store');
+Route::post('/role/store',[RolManagerController::class,'permission_store'])->name('permission.store');
+
 
 require __DIR__.'/auth.php';
